@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { HeaderComponent } from './components/header/header.component';
 import { UserComponent } from "./components/user/user.component";
 import { DUMMY_USERS } from './dummy-users';
-import { TasksComponent } from "./components/task/tasks.component";
+import { TasksComponent } from "./components/tasks/tasks.component";
 
 @Component({
   selector: 'app-root',
@@ -14,7 +14,7 @@ import { TasksComponent } from "./components/task/tasks.component";
 export class AppComponent {
   title = 'first-angular-app';
   users = DUMMY_USERS;
-  selectedUserId = 'u1'
+  selectedUserId = ''
 
   get selectedUser() {
     return this.users.find((user) => user.id  === this.selectedUserId)
