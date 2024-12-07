@@ -23,6 +23,7 @@
         [id]="users[2].id"
         [avatar]="users[2].avatar"
         [name]="users[2].name"
+        (select)="onSelectedUser($event)"
       />
     </li>
     <li id="users">
@@ -34,4 +35,6 @@
       />
     </li>
   </ul>
+
+  <app-tasks [name]="selectedUser.name" />
 </main>
